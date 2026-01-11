@@ -1,0 +1,18 @@
+.BtnPrincipal {
+    background-color: rgb(247, 58, 58);
+    width: auto;
+    padding: 8px;
+    transition: ease 0.4s ;
+    border-radius: 5px;
+    font-size: 20px;
+    border-color: black;
+    border-width: 0.2px;
+    filter: drop-shadow(0px 0px 0px black)
+}
+
+.BtnPrincipal:hover {
+    background-color: rgb(247, 119, 119);
+    filter: drop-shadow(0px 10px 15px rgb(209, 48, 48));
+    font-size: 22px;
+    padding: 10px;        
+}
