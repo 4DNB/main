@@ -10,10 +10,27 @@ function Body() {
             <div style={{
                 position: 'relative',
                 top: '20px',
-                justifyContent: 'center',
-                display: 'flex'
-                
-                }}>
+                justifyContent: 'center',                
+                alignItems: 'center',
+                display: 'grid',
+                gridTemplateColumns: 'auto auto auto auto auto'
+                // border: '1px solid black'
+
+            }}>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
+                <Button texto={"Realizar Backup PostgreSQL"}></Button>
                 <Button texto={"Realizar Backup PostgreSQL"}></Button>
             </div>
         </div>
