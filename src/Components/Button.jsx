@@ -1,12 +1,6 @@
-import { useState } from 'react';
 import './Button.css'
 
-function Button({ texto }) {
-    const [count, setCount] = useState(0);
-
-    function handleClick() {
-        setCount(count + 1);
-    }
+function Button({ texto, onclick }) {
 
     return (
 
@@ -17,11 +11,10 @@ function Button({ texto }) {
             <button style={{
             }}
                 className="BtnPrincipal"
-                onClick={handleClick}
+                onClick={onclick}
             >
-                {count}
+                {texto}
             </button>
-            
         </div>
     )
 }

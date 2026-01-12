@@ -1,0 +1,61 @@
+.fondoNegroTextArea {
+    background-color: rgb(10, 10, 10, 50%);
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.divTextArea {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.fondoTxtAreaPostgre {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 10px;
+    display: grid;
+    width: 35%;
+    height: 50%;
+    text-align: center;
+    position: relative;
+    top: 5%;
+    z-index: 3;
+}
+
+.TxtAreaPostgre {
+    position: relative;
+    border: 2px solid black;
+    width: 550px;
+    height: 300px;
+}
+
+.btnAreaPostgre {
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 3;
+    transition: 0.4s ease;
+}
+
+.btnAreaPostgre:hover {
+    background-color: black;
+    color: white;
+}
