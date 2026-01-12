@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "./Button";
 import './Button.css'
 import './Body.css'
@@ -6,6 +6,21 @@ import './Body.css'
 function Body() {
     const [count, setCount] = useState(0);
     let content;
+
+    useEffect(() => {
+        function handleKeyDown(event) {
+            if (event.key === "Escape") {
+                setCount(0);
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        // Limpieza del evento
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, []);
 
     function TxtPostgreSQL() {
 
