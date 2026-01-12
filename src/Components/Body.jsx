@@ -3,6 +3,9 @@ import Button from "./Button";
 import './Button.css'
 import './Body.css'
 
+
+const serverUrl = 'http://localhost:5156/Main';
+
 function Body() {
     const [count, setCount] = useState(0);
     let content;
@@ -49,7 +52,10 @@ function Body() {
                             <button className="btnAreaPostgre" onClick={BtnPostgreSQL}>X</button>
                         </div>
                     </div>
-                    <textarea className='TxtAreaPostgre'>adas</textarea>
+                    <textarea className='TxtAreaPostgre'></textarea>
+                    <div style={{ margin: '0' }}>
+                        <button className="btnAreaPostgre">Enviar</button>
+                    </div>
                 </div>
             </div>
         </div>
