@@ -12,7 +12,8 @@ function Button({ texto, onclick }) {
             }}
                 className="BtnPrincipal"
                 onClick={onclick}
-            >
+            > 
+            
                 {texto}
             </button>
         </div>
