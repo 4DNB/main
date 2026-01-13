@@ -3,11 +3,11 @@ import Button from "./Button";
 import './Button.css'
 import './Body.css'
 
-
 const serverUrl = 'http://localhost:5156/Main';
 
 function Body() {
     const [count, setCount] = useState(0);
+    const [submitted, setSubmitted] = useState(false);
     let content;
 
     useEffect(() => {
@@ -24,6 +24,18 @@ function Body() {
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, []);
+
+    function handleSubmit(e) {
+        // Previene que el navegador recargue la página
+        e.preventDefault();
+
+        // Lee los datos del formulario
+        const form = e.target;
+        const formData = new FormData(form);
+        // Puedes pasar formData como el cuerpo de la consulta directamente:
+        fetch(serverUrl, { method: form.method, body: '"asdasd"', headers: { "Content-Type": "text/json" } });
+
+    }
 
     function TxtPostgreSQL() {
 
@@ -52,10 +64,12 @@ function Body() {
                             <button className="btnAreaPostgre" onClick={BtnPostgreSQL}>X</button>
                         </div>
                     </div>
-                    <textarea className='TxtAreaPostgre'></textarea>
-                    <div style={{ margin: '0' }}>
-                        <button className="btnAreaPostgre">Enviar</button>
-                    </div>
+                    <form method="post" onSubmit={handleSubmit}>
+                        <textarea className='TxtAreaPostgre' name="myInput" defaultValue="Some initial value"></textarea>
+                        <div style={{ margin: '0' }}>
+                            <button className="btnAreaPostgre" type="submit">Enviar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
