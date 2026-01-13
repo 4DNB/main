@@ -3,7 +3,7 @@ import Button from "./Button";
 import './Button.css'
 import './Body.css'
 
-const serverUrl = 'http://localhost:5156/Main';
+const serverUrl = 'https://pokeapi.co/api/v2/pokedex/5';
 
 function Body() {
     const [count, setCount] = useState(0);
@@ -33,7 +33,7 @@ function Body() {
         const form = e.target;
         const formData = new FormData(form);
         // Puedes pasar formData como el cuerpo de la consulta directamente:
-        fetch(serverUrl, { method: form.method, body: '"asdasd"', headers: { "Content-Type": "text/json" } });
+        fetch(serverUrl, { method: 'GET', headers: { "Content-Type": "application/json" } });
 
     }
 
